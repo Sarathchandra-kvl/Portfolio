@@ -13,6 +13,28 @@
     --shadow-medium: 0 8px 30px rgba(44, 82, 130, 0.15);
 }
 
+/* Dark mode variables */
+[data-theme="dark"] {
+    --primary-color: #63b3ed;
+    --secondary-color: #4299e1;
+    --accent-color: #90cdf4;
+    --light-accent: #c3dafe;
+    --background-light: #1a202c;
+    --background-lighter: #2d3748;
+    --text-dark: #f7fafc;
+    --text-light: #a0aec0;
+    --border-color: #4a5568;
+    --card-bg: #2d3748;
+    --shadow-light: 0 4px 22px rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.5);
+    /* More visible greyish background for icons in dark mode */
+    --icon-bg: rgba(220, 220, 220, 0.3);
+    /* More visible background for project tags in dark mode */
+    --tag-bg: rgba(220, 220, 220, 0.15);
+    /* More visible background for skills tags in dark mode */
+    --skills-bg: rgba(220, 220, 220, 0.15);
+}
+
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
@@ -21,6 +43,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .progress-bar {
@@ -43,6 +66,7 @@ body {
     right: 0;
     z-index: 99;
     border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -129,6 +153,32 @@ body {
     opacity: 1;
     transform: translateY(-3px);
     filter: grayscale(0%);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: var(--background-lighter);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-light);
 }
 
 .main-content {
@@ -344,6 +394,7 @@ h2:after {
 
 .skills-tags span {
     background: rgba(44, 82, 130, 0.1);
+    background: var(--skills-bg, rgba(44, 82, 130, 0.1));
     color: var(--primary-color);
     font-weight: 600;
     border-radius: 50px;
@@ -451,6 +502,7 @@ h2:after {
 
 .project-tags .tag {
     background: rgba(44, 82, 130, 0.08);
+    background: var(--tag-bg, rgba(44, 82, 130, 0.08));
     color: var(--primary-color);
     border-radius: 50px;
     padding: 0.3rem 0.8rem;
@@ -503,6 +555,7 @@ h2:after {
     width: 60px;
     height: 60px;
     background: rgba(44, 82, 130, 0.1);
+    background: var(--icon-bg, rgba(44, 82, 130, 0.1));
     border-radius: 10px;
     display: flex;
     justify-content: center;
