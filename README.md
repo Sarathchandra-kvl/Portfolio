@@ -1,15 +1,16 @@
-# Portfolio
-# Personal Portfolio Website
+# React + Vite
 
-This is a single-page personal website showcasing my skills, projects, and experiences.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-- Built with HTML, CSS, and JavaScript.
-- Designed for easy deployment on GitHub Pages.
+Currently, two official plugins are available:
 
-## To deploy:
-1. Fork or clone this repository.
-2. Put your profile photo as `profile.jpg`.
-3. Edit content in `index.html` (name, projects, contact).
-4. Commit and push all files.
-5. Enable GitHub Pages in the repository settings.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
