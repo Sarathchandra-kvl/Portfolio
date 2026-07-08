@@ -8,7 +8,7 @@ import Marquee from './components/Marquee';
 import Cursor from './components/Cursor';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -21,7 +21,7 @@ function App() {
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <div className="min-h-screen bg-[#F9F5E8] dark:bg-[#111111] text-[#111111] dark:text-[#F9F5E8] font-sans selection:bg-[#111111] dark:selection:bg-[#F9F5E8] selection:text-[#F9F5E8] dark:selection:text-[#111111] pb-20 cursor-none transition-colors duration-500">
+    <div className="min-h-screen bg-[#F9F5E8] dark:bg-[#111111] text-[#111111] dark:text-[#F9F5E8] font-sans selection:bg-[#111111] dark:selection:bg-[#F9F5E8] selection:text-[#F9F5E8] dark:selection:text-[#111111] pb-20 md:cursor-none transition-colors duration-500">
       <Cursor />
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <main>
