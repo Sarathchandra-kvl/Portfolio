@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import project1Video from '../assets/Video Project.mp4';
-
+import project2Video from '../assets/Nestoria-video.mp4';
+import project3Video from '../assets/HashBandits-video.mp4';
 const projects = [
   {
     title: 'Retrievix-IITI',
@@ -76,7 +77,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
                 key={index}
-                className="group relative block cursor-none"
+                className="group relative block md:cursor-none"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -97,15 +98,15 @@ const Projects = () => {
                     0{index + 1}
                   </span>
 
-                  {index === 0 && (
-                    <div className="absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-charcoal dark:bg-black">
+                  {(index === 0 || index === 1 || index === 2) && (
+                    <div className="absolute inset-0 z-20 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-charcoal dark:bg-black">
                       <video 
-                        src={project1Video} 
+                        src={index === 0 ? project1Video : index === 1 ? project2Video : project3Video} 
                         autoPlay 
                         loop 
                         muted 
                         playsInline
-                        className="w-full h-full object-cover opacity-90 scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out"
+                        className="w-full h-full object-cover opacity-90 scale-100 md:scale-105 md:group-hover:scale-100 transition-transform duration-1000 ease-out"
                       />
                     </div>
                   )}
