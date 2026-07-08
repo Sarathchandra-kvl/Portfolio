@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import project1Video from '../assets/Video Project.mp4';
 import project2Video from '../assets/Nestoria-video.mp4';
-import project3Video from '../assets/HashBandits-video.mp4';
+import project3Video from '../assets/Hashbandits-video.mp4';
 const projects = [
   {
     title: 'Retrievix-IITI',
@@ -14,7 +14,7 @@ const projects = [
     title: 'Nestoria',
     tags: ['Node.js', 'PostgreSQL', '2025'],
     description: 'RESTful Node.js hotel booking backend backed by a normalized 10-table 3NF PostgreSQL schema. Secured APIs via RBAC/JWT.',
-    link: 'https://github.com/Sarathchandra-kvl/Nestoria'
+    link: 'https://nestoria-v2-frontend.onrender.com/'
   },
   {
     title: 'HashBandits DAO',
